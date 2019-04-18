@@ -1,0 +1,26 @@
+{
+    "name": "carlos/notification",
+    "description": "A library that uses composer for generating email notifications",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Carlos Eduardo",
+            "email": "carloseduardo.oceano@gmail.com",
+            "homepage": "https://www.criativawebdesign.com.br",
+            "role": "CEO/Founder/Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "phpmailer/phpmailer": "6.0.7"
+    },
+    "config": {
+        "vendor-dir": "lib_ext"
+    },
+    "autoload": {
+        "psr-4": {
+            "Notification\\": "_app"
+        }
+    }
+}
