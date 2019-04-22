@@ -13,6 +13,7 @@ class Email
         $this->mail = new PHPMailer(true);
         $this->mail->SMTPDebug = $smtpDebug;                              // Enable verbose debug output
         $this->mail->isSMTP();                                            // Set mailer to use SMTP
+<<<<<<< HEAD
         $this->mail->Host       = $host;                                  // Specify main and backup SMTP servers
         $this->mail->SMTPAuth   = true;                                   // Enable SMTP authentication
         $this->mail->Username   = $user;                                  // SMTP username
@@ -23,6 +24,18 @@ class Email
         $this->mail->setLanguage('br');
         $this->mail->isHTML(true);
         $this->mail->setFrom($setFromEmail, $setFromName);
+=======
+        $this->mail->Host       = 'smtp1.example.com;smtp2.example.com';  // Specify main and backup SMTP servers
+        $this->mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+        $this->mail->Username   = 'user@example.com';                     // SMTP username
+        $this->mail->Password   = 'your password';                        // SMTP password
+        $this->mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
+        $this->mail->Port       = 587;                                    // TCP port to connect to
+        $this->mail->CharSet    = 'utf-8';
+        $this->mail->setLanguage('br');
+        $this->mail->isHTML(true);
+        $this->mail->setFrom('sender Email', 'Teste Composer');
+>>>>>>> 96969ae5e7fe1cc94593e7d8b16fb2a9d54e32a6
     }
 
     public function sendMail($subject, $body, $replyEMail, $replyName, $addressEmail, $addressName){
